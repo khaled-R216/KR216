@@ -10,7 +10,6 @@
 # 3 - proceed to the installation process. But keep in mind that you shall
 #   monitor the continually update of docker source code (to be handed)
 #
-#
 
 check() {
 	[[ $1 -eq 0 ]] && echo $2 OK || {
@@ -143,10 +142,6 @@ install_engine() {
 }
 
 install_engine
-
-# action for post install : call the post install wrapper
-
-. post_install.sh
 
 
 exit 0
