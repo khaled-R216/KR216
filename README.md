@@ -1,2 +1,2 @@
-In this section I introduce a tiny bash script to install docker in ubuntu.
-The instructions are based on what was written in https://docs.docker.com/engine/install/ubuntu/
+This repo will mainly contains some tips for environment setup and
+dependencies management for linux-like systems.
