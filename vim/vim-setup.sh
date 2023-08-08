@@ -223,7 +223,7 @@ EOT
 fi
 
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
-python3.6 install.py # the python version must be python3+ and shall install g++-8
+python3 install.py # the python version must be python3+ and shall install g++-8
 
 # Install coccinelle vim syntax highlighting
 pushd /home/actia-es/hacking/colinlk_tools/tools-box/vim
