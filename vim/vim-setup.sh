@@ -65,7 +65,7 @@ set cinoptions=:0,l1,t0,g0
 
 " set foldmethod=syntax
 
-" set tags=/home/khaled/workspace/linux-janitors/linux/tags
+" set tags=/home/$USER/workspace/linux-janitors/linux/tags
 set tags=./tags,./TAGS,tags,TAGS
 
 " ***************
@@ -130,7 +130,7 @@ let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-" let g:ycm_global_ycm_extra_conf = '/home/khaled/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '/home/$USER/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 
 set completeopt-=preview
 
@@ -226,7 +226,7 @@ cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 python3 install.py # the python version must be python3+ and shall install g++-8
 
 # Install coccinelle vim syntax highlighting
-pushd /home/actia-es/hacking/colinlk_tools/tools-box/vim
+pushd $HOME/.vim
 git clone https://github.com/ahf/cocci-syntax.git
 cd cocci-syntax
 make
