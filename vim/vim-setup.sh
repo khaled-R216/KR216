@@ -2,9 +2,14 @@
 
 echo "Setup env to install vim plugins"
 
-if [ ! -d ~/.vim ]; then
-	echo "create ~/.vim directory"
-	mkdir -p ~/.vim/autoload ~/.vim/bundle && wget -O ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+echo "checking cscope installation"
+which cscope
+[[ $? -ne 0 ]] && sudo apt install cscope
+
+if [ ! -d ~/.vim/autoload -a ~/.vim/bundle ]; then
+	echo "create ~/.vim/autoload and ~/.vim/bundle directories"
+	mkdir -p ~/.vim/autoload && wget -O ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	mkdir -p ~/.vim/bundle
 fi
 
 [ ! -f ~/.vimrc ] && echo "execute pathogen#infect()" > ~/.vimrc && echo "syntax on" >> ~/.vimrc && echo "filetype plugin indent on" >> ~/.vimrc
