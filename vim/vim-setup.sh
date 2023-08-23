@@ -115,7 +115,7 @@ let g:ctrlp_working_path_mode = 'r'
 nmap <leader>p :CtrlP<cr>  " enter file search mode
 
 " Nerdtree
-autocmd vimenter * NERDTree
+autocmd VimEnter * silent NERDTree | wincmd p
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
